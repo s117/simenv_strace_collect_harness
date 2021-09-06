@@ -59,7 +59,7 @@
   memory: 2048
   sysroot: 434.zeusmp_ref
 435.gromacs_ref:
-  cmd: gromacs_base.rv64 -silent -deffnm gromacs --nice 0
+  cmd: gromacs_base.rv64 -silent -deffnm gromacs -nice 0
   memory: 2048
   sysroot: 435.gromacs_ref
 436.cactusADM_ref:
