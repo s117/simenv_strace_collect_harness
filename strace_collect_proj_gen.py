@@ -1,11 +1,40 @@
 #!/usr/bin/env python3
 import os
 import operator
+from typing import Optional
 
 import yaml
 import click as click
+from bashlex import parser, ast
+from bashlex.errors import ParsingError
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+
+
+def add_prefix_to_stdin_file_in_shcmd(shcmd, prefix):
+    # type: (str, str) -> Optional[str]
+    trees = parser.parse(shcmd)
+    insert_positions = []
+
+    class nodevisitor(ast.nodevisitor):
+        def visitredirect(self, n, input, type, output, heredoc):
+            if type == "<" and len(output.parts) == 0:
+                insert_positions.append(output.pos[0])
+            else:
+                print("Warning: command [%s] contains non-resolvable stdin source." % shcmd)
+
+    try:
+        for tree in trees:
+            visitor = nodevisitor()
+            visitor.visit(tree)
+    except ParsingError:
+        return None
+
+    insert_positions.sort(reverse=True)
+    result_cmd = shcmd
+    for ins_pos in insert_positions:
+        result_cmd = f"{result_cmd[:ins_pos]}{prefix}{result_cmd[ins_pos:]}"
+    return result_cmd
 
 
 @click.command()
@@ -34,7 +63,10 @@ def main(path_to_all_sysroot, output_path):
     for app_name, app_info in apps_info.items():
         os.makedirs(os.path.join(output_path, app_name), exist_ok=True)
         mk_template_config["app_name"] = app_name
-        mk_template_config["app_cmd"] = app_info["cmd"]
+        mk_template_config["app_cmd"] = add_prefix_to_stdin_file_in_shcmd(
+            app_info["cmd"],
+            "$(SIMENV_SYSROOT)/$(APP_INIT_CWD)/"
+        )
         mk_template_config["app_memsize"] = app_info["memory"]
         mk_template_config["app_pristine_sysroot"] = \
             os.path.abspath(

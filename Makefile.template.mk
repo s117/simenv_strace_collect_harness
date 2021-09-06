@@ -3,9 +3,9 @@ PRISTINE_SYSROOT = {app_pristine_sysroot}
 TOP_DIR = $(PWD)
 SIMENV_SYSROOT = $(TOP_DIR)/simenv
 
+APP_INIT_CWD = {app_init_cwd}
 APP_NAME = {app_name}
 APP_CMD = {app_cmd}
-APP_INIT_CWD = {app_init_cwd}
 APP_MEMSIZE = {app_memsize}
 
 SIM = {sim_cmd}
