@@ -18,6 +18,8 @@ FESVR_FLAGS_EXTRA =
 PK_FLAGS_EXTRA =
 APP_CMD_EXTRA =
 
+SIM_CMD_WRAPPER = /usr/bin/time -vo time.rpt
+
 .PHONY: envsetup envclean run
 
 envsetup:
@@ -33,7 +35,7 @@ envclean:
 
 run:
 	@ echo Starting simulation
-	$(SIM) -m$(APP_MEMSIZE) $(SIM_FLAGS) $(SIM_FLAGS_EXTRA) $(FESVR_FLAGS) $(FESVR_FLAGS_EXTRA) +chroot=$(SIMENV_SYSROOT) +target-cwd=$(APP_INIT_CWD) pk $(PK_FLAGS) $(PK_FLAGS_EXTRA) $(APP_CMD) $(APP_CMD_EXTRA) 2>&1 | tee run.log
+	$(SIM_CMD_WRAPPER) $(SIM) -m$(APP_MEMSIZE) $(SIM_FLAGS) $(SIM_FLAGS_EXTRA) $(FESVR_FLAGS) $(FESVR_FLAGS_EXTRA) +chroot=$(SIMENV_SYSROOT) +target-cwd=$(APP_INIT_CWD) pk $(PK_FLAGS) $(PK_FLAGS_EXTRA) $(APP_CMD) $(APP_CMD_EXTRA) 2>&1 | tee run.log
 
 clean: envclean
 	rm -fv $(TOP_DIR)/*.log

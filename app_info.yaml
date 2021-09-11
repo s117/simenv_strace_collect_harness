@@ -1,238 +1,296 @@
 400.perlbench_checkspam_ref:
   cmd: perlbench_base.rv64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+  estimated_time: 9.524444444444445
   memory: 256
   sysroot: 400.perlbench_ref
 400.perlbench_diffmail_ref:
   cmd: perlbench_base.rv64 -I./lib diffmail.pl 4 800 10 17 19 300
+  estimated_time: 5.034166666666667
   memory: 512
   sysroot: 400.perlbench_ref
 400.perlbench_splitmail_ref:
   cmd: perlbench_base.rv64 -I./lib splitmail.pl 1600 12 26 16 4500
+  estimated_time: 5.729722222222223
   memory: 1024
   sysroot: 400.perlbench_ref
 401.bzip2_chicken_ref:
   cmd: bzip2_base.rv64 chicken.jpg 30
+  estimated_time: 1.2125
   memory: 256
   sysroot: 401.bzip2_ref
 401.bzip2_combined_ref:
   cmd: bzip2_base.rv64 input.combined 200
+  estimated_time: 2.721111111111111
   memory: 1024
   sysroot: 401.bzip2_ref
 401.bzip2_liberty_ref:
   cmd: bzip2_base.rv64 liberty.jpg 30
+  estimated_time: 2.0555555555555554
   memory: 256
   sysroot: 401.bzip2_ref
 401.bzip2_program_ref:
   cmd: bzip2_base.rv64 input.program 280
+  estimated_time: 4.115833333333333
   memory: 1024
   sysroot: 401.bzip2_ref
 401.bzip2_source_ref:
   cmd: bzip2_base.rv64 input.source 280
+  estimated_time: 3.4561111111111114
   memory: 1024
   sysroot: 401.bzip2_ref
 401.bzip2_text_ref:
   cmd: bzip2_base.rv64 text.html 280
+  estimated_time: 5.239444444444445
   memory: 1024
   sysroot: 401.bzip2_ref
 403.gcc_ref:
   cmd: gcc_base.rv64 expr.in -o expr.s
+  estimated_time: 0.9271638888888889
   memory: 512
   sysroot: 403.gcc_ref
 410.bwaves_ref:
   cmd: bwaves_base.rv64
+  estimated_time: 15.61361111111111
   memory: 1024
   sysroot: 410.bwaves_ref
 416.gamess_ref:
   cmd: gamess_base.rv64 < cytosine.2.config
+  estimated_time: 13.469166666666666
   memory: 256
   sysroot: 416.gamess_ref
 429.mcf_ref:
   cmd: mcf_base.rv64 inp.in
+  estimated_time: 2.2233333333333336
   memory: 2048
   sysroot: 429.mcf_ref
 433.milc_ref:
   cmd: milc_base.rv64 < su3imp.in
+  estimated_time: 9.193333333333333
   memory: 1024
   sysroot: 433.milc_ref
 434.zeusmp_ref:
   cmd: zeusmp_base.rv64
+  estimated_time: 14.030000000000001
   memory: 512
   sysroot: 434.zeusmp_ref
 435.gromacs_ref:
   cmd: gromacs_base.rv64 -silent -deffnm gromacs --nice 0
+  estimated_time: 14.623333333333333
   memory: 256
   sysroot: 435.gromacs_ref
 436.cactusADM_ref:
   cmd: cactusADM_base.rv64 benchADM.par
+  estimated_time: 60.3925
   memory: 1024
   sysroot: 436.cactusADM_ref
 437.leslie3d_ref:
   cmd: leslie3d_base.rv64 < leslie3d.in
+  estimated_time: 14.078055555555554
   memory: 256
   sysroot: 437.leslie3d_ref
 444.namd_ref:
   cmd: namd_base.rv64 --input namd.input --iterations 38 --output namd.out
+  estimated_time: 17.569444444444443
   memory: 256
   sysroot: 444.namd_ref
 445.gobmk_ref:
   cmd: gobmk_base.rv64 --quiet --mode gtp < score2.tst
+  estimated_time: 3.971388888888889
   memory: 256
   sysroot: 445.gobmk_ref
 447.dealII_ref:
   cmd: dealII_base.rv64 23
+  estimated_time: 11.646944444444443
   memory: 1024
   sysroot: 447.dealII_ref
 450.soplex_ref:
   cmd: pds-50.mps
+  estimated_time: 2.6516666666666664
   memory: 256
   sysroot: 450.soplex_ref
 453.povray_ref:
   cmd: povray_base.rv64 SPEC-benchmark-ref.ini
+  estimated_time: 12.495833333333332
   memory: 256
   sysroot: 453.povray_ref
 454.calculix_ref:
   cmd: calculix_base.rv64 -i hyperviscoplastic
+  estimated_time: 33.64
   memory: 256
   sysroot: 454.calculix_ref
 456.hmmer_nph3_ref:
   cmd: hmmer_base.rv64 nph3.hmm swiss41
+  estimated_time: 6.556388888888889
   memory: 256
   sysroot: 456.hmmer_ref
 456.hmmer_retro_ref:
   cmd: hmmer_base.rv64 --fixed 0 --mean 500 --num 500000 --sd 350 --seed 0 retro.hmm
+  estimated_time: 11.241388888888888
   memory: 256
   sysroot: 456.hmmer_ref
 458.sjeng_ref:
   cmd: sjeng_base.rv64 ref.txt
+  estimated_time: 24.766111111111112
   memory: 256
   sysroot: 458.sjeng_ref
 459.GemsFDTD_ref:
   cmd: GemsFDTD_base.rv64
+  estimated_time: 12.695833333333333
   memory: 1024
   sysroot: 459.GemsFDTD_ref
 462.libquantum_ref:
   cmd: libquantum_base.rv64 1397 8
+  estimated_time: 11.375833333333334
   memory: 256
   sysroot: 462.libquantum_ref
 464.h264ref_ref:
   cmd: h264ref_base.rv64 -d foreman_ref_encoder_baseline.cfg
+  estimated_time: 4.031666666666666
   memory: 256
   sysroot: 464.h264ref_ref
 465.tonto_ref:
   cmd: tonto_base.rv64
+  estimated_time: 14.303611111111111
   memory: 256
   sysroot: 465.tonto_ref
 470.lbm_ref:
   cmd: lbm_base.rv64 3000 reference.dat 0 0 100_100_130_ldc.of
+  estimated_time: 12.559166666666668
   memory: 512
   sysroot: 470.lbm_ref
 471.omnetpp_ref:
   cmd: omnetpp_base.rv64 omnetpp.ini
+  estimated_time: 7.5375
   memory: 256
   sysroot: 471.omnetpp_ref
 473.astar_biglakes_ref:
   cmd: astar_base.rv64 BigLakes2048.cfg
+  estimated_time: 2.4877777777777776
   memory: 512
   sysroot: 473.astar_ref
 473.astar_rivers_ref:
   cmd: astar_base.rv64 rivers.cfg
+  estimated_time: 4.982222222222222
   memory: 256
   sysroot: 473.astar_ref
 481.wrf_ref:
   cmd: wrf_base.rv64
+  estimated_time: 18.621944444444445
   memory: 1024
   sysroot: 481.wrf_ref
 482.sphinx3_ref:
   cmd: sphinx_livepretend_base.rv64 ctlfile . args.an4
+  estimated_time: 18.975555555555555
   memory: 256
   sysroot: 482.sphinx3_ref
 483.xalancbmk_ref:
   cmd: Xalan_base.rv64 -v t5.xml xalanc.xsl
+  estimated_time: 8.808055555555557
   memory: 512
   sysroot: 483.xalancbmk_ref
 600.perlbench_s_diff_ref:
   cmd: perlbench_s_base.rv64 -I./lib diffmail.pl 4 800 10 17 19 300
+  estimated_time: 11.617777777777778
   memory: 256
   sysroot: 600.perlbench_s_ref
 600.perlbench_s_spam_ref:
   cmd: perlbench_s_base.rv64 -I./lib checkspam.pl 2500 5 25 11 150 1 1 1 1
+  estimated_time: 13.374722222222223
   memory: 256
   sysroot: 600.perlbench_s_ref
 600.perlbench_s_split_ref:
   cmd: perlbench_s_base.rv64 -I./lib splitmail.pl 6400 12 26 16 100 0
+  estimated_time: 11.669722222222221
   memory: 256
   sysroot: 600.perlbench_s_ref
 602.gcc_s_1_ref:
   cmd: sgcc_base.rv64 gcc-pp.c -O5 -fipa-pta -o gcc-pp.opts-O5_-fipa-pta.s
+  estimated_time: 9.592222222222222
   memory: 8192
   sysroot: 602.gcc_s_ref
 602.gcc_s_2_ref:
   cmd: sgcc_base.rv64 gcc-pp.c -O5 -finline-limit=1000 -fselective-scheduling -fselective-scheduling2
     -o gcc-pp.opts-O5_-finline-limit_1000_-fselective-scheduling_-fselective-scheduling2.s
+  estimated_time: 7.635555555555555
   memory: 4096
   sysroot: 602.gcc_s_ref
 602.gcc_s_3_ref:
   cmd: sgcc_base.rv64 gcc-pp.c -O5 -finline-limit=24000 -fgcse -fgcse-las -fgcse-lm
     -fgcse-sm -o gcc-pp.opts-O5_-finline-limit_24000_-fgcse_-fgcse-las_-fgcse-lm_-fgcse-sm.s
+  estimated_time: 7.109999999999999
   memory: 4096
   sysroot: 602.gcc_s_ref
 603.bwaves_s_1_ref:
   cmd: speed_bwaves_base.rv64 bwaves_1 < bwaves_1.in
+  estimated_time: 42.00805555555556
   memory: 16384
   sysroot: 603.bwaves_s_ref
 603.bwaves_s_2_ref:
   cmd: speed_bwaves_base.rv64 bwaves_2 < bwaves_2.in
+  estimated_time: 39.135
   memory: 16384
   sysroot: 603.bwaves_s_ref
 605.mcf_s_ref:
   cmd: mcf_s_base.rv64 inp.in
+  estimated_time: 9.364722222222222
   memory: 8192
   sysroot: 605.mcf_s_ref
 607.cactuBSSN_s_ref:
   cmd: cactuBSSN_s_base.rv64 spec_ref.par
+  estimated_time: 360.0
   memory: 8192
   sysroot: 607.cactuBSSN_s_ref
 619.lbm_s_ref:
   cmd: lbm_s_base.rv64 2000 reference.dat 0 0 200_200_260_ldc.of
+  estimated_time: 41.17833333333333
   memory: 4096
   sysroot: 619.lbm_s_ref
 620.omnetpp_s_ref:
   cmd: omnetpp_s_base.rv64 -c General -r 0
+  estimated_time: 15.250833333333333
   memory: 256
   sysroot: 620.omnetpp_s_ref
 621.wrf_s_ref:
   cmd: wrf_s_base.rv64
+  estimated_time: 110.14916666666667
   memory: 256
   sysroot: 621.wrf_s_ref
 623.xalancbmk_s_ref:
   cmd: xalancbmk_s_base.rv64 -v t5.xml xalanc.xsl
+  estimated_time: 10.248333333333333
   memory: 512
   sysroot: 623.xalancbmk_s_ref
 625.x264_s_duopass_1_ref:
   cmd: x264_s_base.rv64 --pass 1 --stats x264_stats.log --bitrate 1000 --frames 1000
     -o BuckBunny_New.264 BuckBunny.yuv 1280x720
+  estimated_time: 4.264722222222222
   memory: 256
   sysroot: 625.x264_s_ref
 625.x264_s_duopass_2_ref:
   cmd: x264_s_base.rv64 --pass 2 --stats x264_stats.log --bitrate 1000 --dumpyuv 200
     --frames 1000 -o BuckBunny_New.264 BuckBunny.yuv 1280x720
+  estimated_time: 12.813333333333334
   memory: 256
   sysroot: 625.x264_s_second_pass_ref
 625.x264_s_unipass_ref:
   cmd: x264_s_base.rv64 --seek 500 --dumpyuv 200 --frames 1250 -o BuckBunny_New.264
     BuckBunny.yuv 1280x720
+  estimated_time: 13.336666666666668
   memory: 256
   sysroot: 625.x264_s_ref
 627.cam4_s_ref:
   cmd: cam4_s_base.rv64
+  estimated_time: 86.2761111111111
   memory: 1024
   sysroot: 627.cam4_s_ref
 628.pop2_s_ref:
   cmd: speed_pop2_base.rv64
+  estimated_time: 95.96777777777778
   memory: 2048
   sysroot: 628.pop2_s_ref
 631.deepsjeng_s_ref:
   cmd: deepsjeng_s_base.rv64 ref.txt
+  estimated_time: 28.190277777777776
   memory: 8192
   sysroot: 631.deepsjeng_s_ref
 638.imagick_s_ref:
@@ -241,35 +299,48 @@
     -channel R -equalize +channel -colorspace sRGB -define histogram:unique-colors=false
     -adaptive-blur 0x5 -despeckle -auto-gamma -adaptive-sharpen 55 -enhance -brightness-contrast
     10x10 -resize 30% refspeed_output.tga
+  estimated_time: 360.0
   memory: 8192
   sysroot: 638.imagick_s_ref
 641.leela_s_ref:
   cmd: leela_s_base.rv64 ref.sgf
+  estimated_time: 23.339166666666664
   memory: 256
   sysroot: 641.leela_s_ref
 644.nab_s_ref:
   cmd: nab_s_base.rv64 3j1n 20140317 220
+  estimated_time: 74.81388888888888
   memory: 1024
   sysroot: 644.nab_s_ref
 648.exchange2_s_ref:
   cmd: exchange2_s_base.rv64 6
+  estimated_time: 21.70111111111111
   memory: 256
   sysroot: 648.exchange2_s_ref
 649.fotonik3d_s_ref:
   cmd: fotonik3d_s_base.rv64
+  estimated_time: 39.27638888888889
   memory: 16384
   sysroot: 649.fotonik3d_s_ref
 654.roms_s_ref:
   cmd: sroms_base.rv64 < ocean_benchmark3.in
+  estimated_time: 109.0675
   memory: 16384
   sysroot: 654.roms_s_ref
 657.xz_s_cld_ref:
   cmd: xz_s_base.rv64 cld.tar.xz 1400 19cf30ae51eddcbefda78dd06014b4b96281456e078ca7c13e1c0c9e6aaea8dff3efb4ad6b0456697718cede6bd5454852652806a657bb56e07d61128434b474
     536995164 539938872 8
+  estimated_time: 21.139166666666664
   memory: 8192
   sysroot: 657.xz_s_ref
 657.xz_s_docs_ref:
   cmd: xz_s_base.rv64 cpu2006docs.tar.xz 6643 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae
     1036078272 1111795472 4
+  estimated_time: 29.723611111111108
   memory: 16384
   sysroot: 657.xz_s_ref
+helloworld:
+  cmd: helloworld.rv64
+  estimated_time: 0.08333333333333333
+  memory: 256
+  sysroot: helloworld
