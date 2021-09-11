@@ -59,9 +59,9 @@ def main(path_to_all_sysroot, output_path, skip_sysroot_check):
     with open(os.path.join(SCRIPT_DIR, "app_info.yaml")) as fp_app_info:
         apps_info = yaml.safe_load(fp_app_info)
 
-    with open(os.path.join(SCRIPT_DIR, "Makefile.template.mk"))as fin:
+    with open(os.path.join(SCRIPT_DIR, "Makefile.template.mk")) as fin:
         mk_template = fin.read()
-    with open(os.path.join(SCRIPT_DIR, "job_bsub.template.bash"))as fin:
+    with open(os.path.join(SCRIPT_DIR, "bsub_job.template.bash")) as fin:
         bsub_job_template = fin.read()
     mk_template_config = {
         "app_name": "",
@@ -105,7 +105,7 @@ def main(path_to_all_sysroot, output_path, skip_sysroot_check):
         with open(os.path.join(output_path, app_name, "Makefile"), "w") as fout:
             fout.write(mk_template.format(**mk_template_config))
 
-        with open(os.path.join(output_path, app_name, "job_bsub.sh"), "w") as fout:
+        with open(os.path.join(output_path, app_name, "bsub_job.sh"), "w") as fout:
             fout.write(bsub_job_template.format(**bjob_template_config))
 
         generated_runs.append((app_name, app_info["memory"]))

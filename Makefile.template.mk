@@ -42,3 +42,4 @@ clean: envclean
 	rm -fv $(TOP_DIR)/*.stdout
 	rm -fv $(TOP_DIR)/*.stderr
 	rm -fv $(TOP_DIR)/*.trace
+	rm -fv $(TOP_DIR)/time.rpt
