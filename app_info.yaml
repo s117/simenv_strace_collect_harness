@@ -104,7 +104,7 @@
   memory: 1024
   sysroot: 447.dealII_ref
 450.soplex_ref:
-  cmd: pds-50.mps
+  cmd: soplex_base.rv64 -s1 -e -m45000 pds-50.mps
   estimated_time: 2.6516666666666664
   memory: 256
   sysroot: 450.soplex_ref
