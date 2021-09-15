@@ -56,7 +56,8 @@
 416.gamess_ref:
   cmd: gamess_base.rv64 < cytosine.2.config
   estimated_time: 13.469166666666666
-  memory: 256
+  # real memory usage is less than 256, but ELF Data segment is about 630MB
+  memory: 1024
   sysroot: 416.gamess_ref
 429.mcf_ref:
   cmd: mcf_base.rv64 inp.in
@@ -71,7 +72,8 @@
 434.zeusmp_ref:
   cmd: zeusmp_base.rv64
   estimated_time: 14.030000000000001
-  memory: 512
+  # real memory usage is less than 256, but ELF Data segment is about 1118MB
+  memory: 2048
   sysroot: 434.zeusmp_ref
 435.gromacs_ref:
   cmd: gromacs_base.rv64 -silent -deffnm gromacs --nice 0
@@ -116,7 +118,8 @@
 454.calculix_ref:
   cmd: calculix_base.rv64 -i hyperviscoplastic
   estimated_time: 33.64
-  memory: 256
+  # needs 512MB otherwise will trigger bad_alloc
+  memory: 512
   sysroot: 454.calculix_ref
 456.hmmer_nph3_ref:
   cmd: hmmer_base.rv64 nph3.hmm swiss41
@@ -281,7 +284,8 @@
 627.cam4_s_ref:
   cmd: cam4_s_base.rv64
   estimated_time: 86.2761111111111
-  memory: 1024
+  # needs 2048MB otherwise will trigger bad_alloc
+  memory: 2048
   sysroot: 627.cam4_s_ref
 628.pop2_s_ref:
   cmd: speed_pop2_base.rv64
