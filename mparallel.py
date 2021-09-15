@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import sys
 import queue
 import functools
@@ -129,8 +130,13 @@ class ParallelScheduler:
 @click.option("-m", "--max-memory", required=True, type=click.INT, help="Maximum usable RAM.")
 @click.option("-j", "--jobs", required=True, type=click.INT, help="Maximum level of parallelism.")
 @click.option("-o", "--output-file", required=False, type=click.File("w"), help="Dump STDOUT and STDERR to a file.")
-def main(job_file, max_memory, jobs, output_file):
-    # type: (TextIO, int, int, Optional[TextIO]) -> None
+@click.option("-C", "--directory", required=False, type=click.Path(exists=True, dir_okay=True, file_okay=False),
+              help="Change to directory before execution any command")
+def main(job_file, max_memory, jobs, directory, output_file):
+    # type: (TextIO, int, int, str, Optional[TextIO]) -> None
+    if directory:
+        os.chdir(directory)
+
     try:
         scheduler = ParallelScheduler(job_file, max_memory, jobs, output_file)
         scheduler.start()
